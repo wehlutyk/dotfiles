@@ -1,0 +1,9 @@
+#!/bin/bash
+# This hook is run after every virtualenv is activated.
+
+# Allow us to use virtualenvwrapper with Gems and NPM
+export GEM_HOME="$VIRTUAL_ENV/lib/gems"
+export GEM_PATH=""
+PATH="$PATH:$GEM_HOME/bin"
+export npm_config_prefix=$VIRTUAL_ENV
+export PATH
