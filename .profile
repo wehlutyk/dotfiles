@@ -17,8 +17,8 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+if [ -d "$HOME/.localroot/bin" ] ; then
+    PATH="$HOME/.localroot/bin:$PATH"
 fi
 export LANGUAGE="en_US:en"
 export LC_MESSAGES="en_US.UTF-8"
