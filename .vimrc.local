@@ -1,0 +1,22 @@
+" Set colorscheme
+colorscheme molokai
+
+" Prevent annoying spell-checker highlighting
+set nospell
+
+" Prevent indent-guides from appearing
+let g:indent_guides_enable_on_vim_startup=0
+
+" NERDTree settings
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+" Web related files
+autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee :%s/\s\+$//e
+autocmd BufRead *.html,*.hbs,*.coffee :set sts=2
+autocmd BufRead *.html,*.hbs,*.coffee :set shiftwidth=2
+
+" Python Nose testing
+let g:PyUnitTestsStructure = "side-by-side"
+
+" Have tagbar sort tags as they appear in the file
+let g:tagbar_sort=0
