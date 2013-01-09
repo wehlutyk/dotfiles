@@ -42,3 +42,6 @@ export PATH="$HOME/.localroot/bin:$PATH"
 
 # Moved this below so that .localroot/bin is included
 source $ZSH/oh-my-zsh.sh
+
+# Source non-lazy virtualenvwrapper so that it works on first command
+source "$(which virtualenvwrapper.sh)"
