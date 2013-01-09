@@ -111,3 +111,6 @@ then
 else
   export PYTHONPATH="$HOME/.localroot/lib/python2.7/site-packages:$PYTHONPATH"
 fi
+
+# Autojump
+. /usr/share/autojump/autojump.sh
