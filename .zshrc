@@ -40,8 +40,29 @@ export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 # Local bin
 export PATH="$HOME/.localroot/bin:$PATH"
 
-# Moved this below so that .localroot/bin is included
+# Moved this below PATH so that .localroot/bin is included
 source $ZSH/oh-my-zsh.sh
 
 # Source non-lazy virtualenvwrapper so that it works on first command
 source "$(which virtualenvwrapper.sh)"
+
+# Networking and server aliases
+alias lclipper='ssh lerique@clipper.ens.fr'
+alias lproxy='ssh -N -T -L 3128:www-cache.ens.fr:3128 lerique@clipper.ens.fr'
+alias smehho='ssh sl@mehho.net'
+alias smehholoc='ssh sl@192.168.0.50'
+alias amehho='ssh sebadmin@mehho.net'
+alias amehholoc='ssh sebadmin@192.168.0.50'
+alias swander='ssh -p2222 sl@wander.mehho.net'
+alias swanderloc='ssh -p2222 sl@192.168.0.5'
+alias awander='ssh -p2222 sebadmin@wander.mehho.net'
+alias awanderloc='ssh -p2222 sebadmin@192.168.0.5'
+
+# Useful for current research
+alias fzebulon='ssh fourquet@zebulon.iscpif.fr'
+
+# IPython aliases
+alias ilab='ipython --pylab'
+alias iqt-lab='ipython qtconsole --pylab=inline'
+alias iqt-connect='ipython qtconsole --existing --pylab=inline'
+alias inote-lab='ipython notebook --pylab=inline'
