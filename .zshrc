@@ -46,6 +46,9 @@ source $ZSH/oh-my-zsh.sh
 # Source non-lazy virtualenvwrapper so that it works on first command
 source "$(which virtualenvwrapper.sh)"
 
+# Android SDK home for Maven
+export ANDROID_HOME=/home/sebastien/Code/Android/android-sdk/
+
 # Networking and server aliases
 alias lclipper='ssh lerique@clipper.ens.fr'
 alias lproxy='ssh -N -T -L 3128:www-cache.ens.fr:3128 lerique@clipper.ens.fr'
