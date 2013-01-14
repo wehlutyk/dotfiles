@@ -1,5 +1,5 @@
 # Android SDK home for MAven
-export ANDROID_HOME=/home/sebastien/Code/Android/android-sdk/
+export ANDROID_HOME=/home/sebastien/Code/Android/android-sdk
 
 ## Networking and server aliases
 alias lclipper='ssh lerique@clipper.ens.fr'

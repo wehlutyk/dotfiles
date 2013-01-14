@@ -47,7 +47,7 @@ source $ZSH/oh-my-zsh.sh
 source "$(which virtualenvwrapper.sh)"
 
 # Android SDK home for Maven
-export ANDROID_HOME=/home/sebastien/Code/Android/android-sdk/
+export ANDROID_HOME=/home/sebastien/Code/Android/android-sdk
 
 # Networking and server aliases
 alias lclipper='ssh lerique@clipper.ens.fr'
