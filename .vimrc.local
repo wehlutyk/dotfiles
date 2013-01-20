@@ -15,6 +15,10 @@ autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee :%s/\s\+$//e
 autocmd BufRead *.html,*.hbs,*.coffee :set sts=2
 autocmd BufRead *.html,*.hbs,*.coffee :set shiftwidth=2
 
+" Sphinx rst editing
+autocmd BufRead *.rst :set sts=3
+autocmd BufRead *.rst :set shiftwidth=3
+
 " Python Nose testing
 let g:PyUnitTestsStructure = "side-by-side"
 
