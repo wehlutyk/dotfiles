@@ -11,9 +11,9 @@ let g:indent_guides_enable_on_vim_startup=0
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 " Web related files
-autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee :%s/\s\+$//e
-autocmd BufRead *.html,*.hbs,*.coffee :set sts=2
-autocmd BufRead *.html,*.hbs,*.coffee :set shiftwidth=2
+autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee,*.yml :%s/\s\+$//e
+autocmd BufRead *.html,*.hbs,*.coffee,*.yml :set sts=2
+autocmd BufRead *.html,*.hbs,*.coffee,*.yml :set shiftwidth=2
 
 " Sphinx rst editing
 autocmd BufRead *.rst :set sts=3
