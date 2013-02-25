@@ -114,3 +114,6 @@ fi
 
 # Autojump
 . /usr/share/autojump/autojump.sh
+
+# Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

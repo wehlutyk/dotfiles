@@ -50,3 +50,6 @@ source "$(which virtualenvwrapper.sh)"
 if [ -f ~/.shell_aliases ]; then
     . ~/.shell_aliases
 fi
+
+# Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
