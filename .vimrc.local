@@ -27,6 +27,7 @@ autocmd BufNewFile,BufRead *.sls :set shiftwidth=2
 
 " Text files
 autocmd BufNewFile,BufRead, *.txt,*.md :set textwidth=78
+autocmd BufNewFile,BufRead, *.txt,*.md :set wrap
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! %!sudo tee > /dev/null %
