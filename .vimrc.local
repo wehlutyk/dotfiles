@@ -10,8 +10,10 @@ let g:indent_guides_enable_on_vim_startup=0
 " NERDTree settings
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
-" Web related files
-autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee,*.yml :%s/\s\+$//e
+" Files for which to remove trailing whitespace
+autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee,*.yml,*.tex,*.md :%s/\s\+$//e
+
+" Files for which to set tabwidth to 2 spaces
 autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.yml :set sts=2
 autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.yml :set shiftwidth=2
 
