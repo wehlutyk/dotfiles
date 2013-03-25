@@ -28,7 +28,7 @@ autocmd BufNewFile,BufRead *.sls :set sts=2
 autocmd BufNewFile,BufRead *.sls :set shiftwidth=2
 
 " Text files
-autocmd BufNewFile,BufRead, *.txt,*.md,*.tex :set textwidth=78
+autocmd BufNewFile,BufRead, *.txt,*.md :set textwidth=78
 autocmd BufNewFile,BufRead, *.txt,*.md,*.tex :set wrap
 
 " LaTeX files
