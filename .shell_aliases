@@ -1,5 +1,5 @@
 # Android SDK home for MAven
-export ANDROID_HOME="/home/sebastien/Code/Android/android-sdk"
+export ANDROID_HOME="/home/sebastien/Code/Android/android-sdk-linux"
 export PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 
 ## Networking and server aliases
