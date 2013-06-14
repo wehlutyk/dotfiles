@@ -7,9 +7,6 @@ set nospell
 " Prevent indent-guides from appearing
 let g:indent_guides_enable_on_vim_startup=0
 
-" Easily add new lines without entering insert mode
-map <CR> o<Esc>k
-
 " NERDTree settings
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
