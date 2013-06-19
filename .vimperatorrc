@@ -1,0 +1,6 @@
+"3.7 (created: 2013/04/03 18:20:07)
+
+inoremap <C-a> <Insert><C-a><Insert>
+source! /home/sl/.vimperatorrc.local
+
+" vim: set ft=vimperator:
