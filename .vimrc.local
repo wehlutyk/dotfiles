@@ -32,7 +32,7 @@ autocmd BufNewFile,BufRead, *.txt,*.md,*.tex :set textwidth=72
 autocmd BufNewFile,BufRead, *.txt,*.md,*.tex :set wrap
 
 " Jade files: workaround for https://github.com/digitaltoad/vim-jade/issues/25
-autocmd BufNewFile,BufRead *.jade setfiletype=jade
+autocmd BufNewFile,BufRead *.jade :set filetype=jade
 
 " LaTeX files
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
