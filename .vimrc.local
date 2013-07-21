@@ -28,8 +28,11 @@ autocmd BufNewFile,BufRead *.sls :set sts=2
 autocmd BufNewFile,BufRead *.sls :set shiftwidth=2
 
 " Text files
-autocmd BufNewFile,BufRead, *.txt,*.md,*.tex :set textwidth=72
-autocmd BufNewFile,BufRead, *.txt,*.md,*.tex :set wrap
+autocmd BufNewFile,BufRead *.txt,*.md,*.tex :set textwidth=80
+autocmd BufNewFile,BufRead *.txt,*.md,*.tex :set wrap
+
+" Python files
+autocmd BufNewFile,BufRead *.py :set textwidth=80
 
 " Jade files: workaround for https://github.com/digitaltoad/vim-jade/issues/25
 autocmd BufNewFile,BufRead *.jade :set filetype=jade
