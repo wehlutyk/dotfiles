@@ -5,10 +5,7 @@ colorscheme molokai
 set nospell
 
 " Prevent indent-guides from appearing
-let g:indent_guides_enable_on_vim_startup=0
-
-" NERDTree settings
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
+"let g:indent_guides_enable_on_vim_startup=0
 
 " Files for which to remove trailing whitespace
 autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee,*.yml,*.tex,*.md :%s/\s\+$//e
@@ -21,18 +18,9 @@ autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.yml :set shiftwidth=2
 autocmd BufNewFile,BufRead *.rst :set sts=3
 autocmd BufNewFile,BufRead *.rst :set shiftwidth=3
 
-" Salt Stack files
-autocmd BufWritePre *.sls :%s/\s\+$//e
-autocmd BufNewFile,BufRead *.sls :set syntax=yaml
-autocmd BufNewFile,BufRead *.sls :set sts=2
-autocmd BufNewFile,BufRead *.sls :set shiftwidth=2
-
 " Text files
-autocmd BufNewFile,BufRead *.txt,*.md,*.tex :set textwidth=80
-autocmd BufNewFile,BufRead *.txt,*.md,*.tex :set wrap
-
-" Python files
-autocmd BufNewFile,BufRead *.py :set textwidth=80
+"autocmd BufNewFile,BufRead *.txt,*.md,*.tex :set textwidth=80
+"autocmd BufNewFile,BufRead *.txt,*.md,*.tex :set wrap
 
 " Jade files: workaround for https://github.com/digitaltoad/vim-jade/issues/25
 autocmd BufNewFile,BufRead *.jade :set filetype=jade
@@ -49,32 +37,7 @@ hi SpellBad cterm=underline ctermfg=red
 cmap w!! %!sudo tee > /dev/null %
 
 " Python Nose testing
-let g:PyUnitTestsStructure = "side-by-side"
+"let g:PyUnitTestsStructure = "side-by-side"
 
 " Have tagbar sort tags as they appear in the file
-let g:tagbar_sort=0
-
-" Smooth scroll, and remap the NERDTree shortcut
-"unmap <C-e>
-"map <C-_> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-"function SmoothScroll(up)
-    "if a:up
-        "let scrollaction=""
-    "else
-        "let scrollaction=""
-    "endif
-    "exec "normal " . scrollaction
-    "redraw
-    "let counter=1
-    "while counter<&scroll
-        "let counter+=1
-        "sleep 1m
-        "redraw
-        "exec "normal " . scrollaction
-    "endwhile
-"endfunction
-
-"nnoremap <C-U> :call SmoothScroll(1)<Enter>
-"nnoremap <C-D> :call SmoothScroll(0)<Enter>
-"inoremap <C-U> <Esc>:call SmoothScroll(1)<Enter>i
-"inoremap <C-D> <Esc>:call SmoothScroll(0)<Enter>i
+"let g:tagbar_sort=0

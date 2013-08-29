@@ -1,2 +1,3 @@
 .texmf-var/fonts
 .texmf-var/luatex-cache
+.localroot/bin
