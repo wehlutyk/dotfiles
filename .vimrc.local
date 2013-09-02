@@ -11,8 +11,8 @@ let g:indent_guides_enable_on_vim_startup=0
 autocmd BufWritePre *.html,*.hbs,*.css,*.less,*.styl,*.coffee,*.yml,*.tex,*.md :%s/\s\+$//e
 
 " Files for which to set tabwidth to 2 spaces
-autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.yml :set sts=2
-autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.yml :set shiftwidth=2
+autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.js,*.yml :set sts=2
+autocmd BufNewFile,BufRead *.html,*.hbs,*.coffee,*.js,*.yml :set shiftwidth=2
 
 " Sphinx rst editing
 autocmd BufNewFile,BufRead *.rst :set sts=3
