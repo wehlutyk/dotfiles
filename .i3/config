@@ -147,3 +147,4 @@ bindsym $mod+u border none
 
 # Start NetworkManager
 exec --no-startup-id nm-applet
+exec --no-startup-id clipit
