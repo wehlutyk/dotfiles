@@ -30,9 +30,6 @@ function info(...) if luakit.verbose then io.stdout:write(string.format(...) .. 
 -- Load users global config
 -- ("$XDG_CONFIG_HOME/luakit/globals.lua" or "/etc/xdg/luakit/globals.lua")
 require "globals"
-globals = {
-    homepage = "mehho.net"
-}
 
 -- Load users theme
 -- ("$XDG_CONFIG_HOME/luakit/theme.lua" or "/etc/xdg/luakit/theme.lua")
@@ -147,6 +144,10 @@ require "follow_selected"
 require "go_input"
 require "go_next_prev"
 require "go_up"
+
+-- AdBlock
+require "adblock"
+require "adblock_chrome"
 
 -----------------------------
 -- End user script loading --
