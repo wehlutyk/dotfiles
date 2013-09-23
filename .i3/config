@@ -21,7 +21,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+A kill
+bindsym $mod+F4 kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -145,6 +145,19 @@ bindsym $mod+t border normal
 bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
-# Start NetworkManager
-exec --no-startup-id nm-applet
-exec --no-startup-id clipit
+# Start a browser window
+bindsym $mod+b exec luakit
+
+# Screen locking
+bindsym $mod+Shift+x exec i3lock -d -n -c 111111
+
+# Scratchpad bindings and initial setup
+bindsym $mod+Shift+equal move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+equal scratchpad show
+
+# Start desktop services
+exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id gnome-keyring-daemon
+exec --no-startup-id i3_startup_programs
