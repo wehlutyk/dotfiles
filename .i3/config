@@ -146,7 +146,7 @@ bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
 # Start a browser window
-bindsym $mod+b exec luakit
+bindsym $mod+b exec firefox
 
 # Start a file navigation  window
 bindsym $mod+n exec tranger
