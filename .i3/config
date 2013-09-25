@@ -148,6 +148,9 @@ bindsym $mod+u border none
 # Start a browser window
 bindsym $mod+b exec luakit
 
+# Start a file navigation  window
+bindsym $mod+n exec tranger
+
 # Screen locking
 bindsym $mod+Shift+x exec i3lock -d -n -c 111111
 
