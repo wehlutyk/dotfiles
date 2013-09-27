@@ -1,6 +1,6 @@
 # Android SDK home for MAven
 export ANDROID_HOME="/home/sl/Code/Android/android-sdk-linux"
-export PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/build-tools/17.0.0"
+export PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 
 ## Networking and server aliases
 alias lclipper='ssh lerique@clipper.ens.fr'
