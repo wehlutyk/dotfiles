@@ -22,3 +22,6 @@ alias ilab='ipython --pylab'
 alias iqt-lab='ipython qtconsole --pylab=inline'
 alias iqt-connect='ipython qtconsole --existing --pylab=inline'
 alias inote-lab='ipython notebook --pylab=inline'
+
+## Git aliases
+alias gd='git diff --color-words'
