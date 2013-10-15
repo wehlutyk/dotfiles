@@ -53,3 +53,6 @@ fi
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Prevent zsh from badly globbing bower
+alias bower='noglob bower'
