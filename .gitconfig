@@ -4,3 +4,5 @@
 [giggle]
 	main-window-maximized = false
 	main-window-geometry = 1054x725+377+24
+[push]
+	default = simple
