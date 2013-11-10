@@ -77,28 +77,28 @@ bindsym $mod+q focus parent
 #bindcode $mod+d focus child
 
 # switch to workspace
-bindsym $mod+ampersand workspace 1
-bindsym $mod+eacute workspace 2
-bindsym $mod+quotedbl workspace 3
-bindsym $mod+apostrophe workspace 4
-bindsym $mod+parenleft workspace 5
-bindsym $mod+minus workspace 6
-bindsym $mod+egrave workspace 7
-bindsym $mod+underscore workspace 8
-bindsym $mod+ccedilla workspace 9
-bindsym $mod+agrave workspace 10
+bindsym $mod+ampersand workspace number 1
+bindsym $mod+eacute workspace number 2
+bindsym $mod+quotedbl workspace number 3
+bindsym $mod+apostrophe workspace number 4
+bindsym $mod+parenleft workspace number 5
+bindsym $mod+minus workspace number 6
+bindsym $mod+egrave workspace number 7
+bindsym $mod+underscore workspace number 8
+bindsym $mod+ccedilla workspace number 9
+bindsym $mod+agrave workspace number 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace number 1; workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2; workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3; workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4; workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5; workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6; workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7; workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8; workspace number 7
+bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -146,7 +146,7 @@ bindsym $mod+y border 1pixel
 bindsym $mod+u border none
 
 # Start a browser window
-bindsym $mod+b exec firefox
+bindsym $mod+b exec luakit
 
 # Start a file navigation  window
 bindsym $mod+n exec tranger
@@ -160,10 +160,24 @@ bindsym $mod+Shift+equal move scratchpad
 # Show the first scratchpad window
 bindsym $mod+equal scratchpad show
 
+# switch between the current and the previously focused one
+bindsym $mod+comma workspace back_and_forth
+bindsym $mod+Shift+comma move container to workspace back_and_forth; workspace back_and_forth
+
+# Rename a workspace
+bindsym $mod+Ctrl+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
+
 # Unmount all udiskie mounts
 bindsym $mod+Shift+U exec udiskie-umount -a
 
 # Start desktop services
 exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id gnome-sound-applet
 exec --no-startup-id udiskie
 exec --no-startup-id i3_startup_programs
+
+# Start default programs
+exec --no-startup-id i3-msg 'workspace 2:mail; exec thunderbird'
+exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
+exec --no-startup-id i3-msg 'workspace 4:chats; exec skype; exec pidgin'
+exec --no-startup-id i3-msg 'workspace 1:notes; exec gnote --search'
