@@ -18,7 +18,8 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal --hide-menubar
+bindsym $mod+Return exec gnome-terminal --hide-menubar
 
 # kill focused window
 bindsym $mod+F4 kill
@@ -149,7 +150,7 @@ bindsym $mod+u border none
 bindsym $mod+b exec luakit
 
 # Start a file navigation  window
-bindsym $mod+n exec tranger
+bindsym $mod+n exec nautilus --no-desktop
 
 # Screen locking
 bindsym $mod+Shift+x exec i3lock -d -n -c 111111
@@ -171,13 +172,11 @@ bindsym $mod+Ctrl+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
 bindsym $mod+Shift+U exec udiskie-umount -a
 
 # Start desktop services
-exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id gnome-sound-applet
-exec --no-startup-id udiskie
 exec --no-startup-id i3_startup_programs
 
 # Start default programs
-exec --no-startup-id i3-msg 'workspace 2:mail; exec thunderbird'
-exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
-exec --no-startup-id i3-msg 'workspace 4:chats; exec skype; exec pidgin'
 exec --no-startup-id i3-msg 'workspace 1:notes; exec gnote --search'
+exec --no-startup-id i3-msg 'workspace 2:mail; exec evolution'
+exec --no-startup-id i3-msg 'workspace 3:web; exec iceweasel'
+exec --no-startup-id i3-msg 'workspace 4:chats; exec skype; exec pidgin'
+exec --no-startup-id i3-msd 'workspace 1:notes'
