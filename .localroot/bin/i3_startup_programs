@@ -12,6 +12,7 @@ gnome-settings-daemon &
 gtk-redshift &
 nm-applet &
 bluetooth-applet &
+gnome-sound-applet &
 owncloud &
 clipit &
 workrave &
