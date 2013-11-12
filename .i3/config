@@ -25,7 +25,7 @@ bindsym $mod+Return exec gnome-terminal --hide-menubar
 bindsym $mod+F4 kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
