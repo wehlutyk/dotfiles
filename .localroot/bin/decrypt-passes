@@ -1,0 +1,5 @@
+#!/bin/bash
+gpg --decrypt ~/Documents/passes.gpg
+echo
+echo "----------------------"
+read -p "Press Enter when done."
