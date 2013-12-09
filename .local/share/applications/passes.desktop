@@ -1,9 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Passes
-Comment=Decrpt and show passwords file
-Exec=decrypt-passes
-Icon=seahorse
-Terminal=true
-Type=Application
-Categories=Utility;Security;
