@@ -19,9 +19,13 @@ alias yelandur='cd ~/Code/Web/yelandur && workon yelandur'
 ## IPython aliases
 # General PyLab IPython
 alias ilab='ipython --pylab'
+alias ilab3='ipython3 --pylab'
 alias iqt-lab='ipython qtconsole --pylab=inline'
+alias iqt3-lab='ipython3 qtconsole --pylab=inline'
 alias iqt-connect='ipython qtconsole --existing --pylab=inline'
+alias iqt3-connect='ipython3 qtconsole --existing --pylab=inline'
 alias inote-lab='ipython notebook --pylab=inline'
+alias inote3-lab='ipython3 notebook --pylab=inline'
 
 ## Git aliases
 alias gd='git diff --color-words'
