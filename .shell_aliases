@@ -2,13 +2,8 @@
 export ANDROID_HOME="/home/sl/Code/Android/android-sdk-linux"
 export PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 
-## Networking and server aliases
-alias lclipper='ssh lerique@clipper.ens.fr'
-alias lproxy='ssh -N -T -L 3128:www-cache.ens.fr:3128 lerique@clipper.ens.fr'
-alias smehho='ssh sl@mehho.net'
-alias smehholoc='ssh sl@192.168.0.5'
-alias amehho='ssh sebadmin@mehho.net'
-alias amehholoc='ssh sebadmin@192.168.0.5'
+## AVR32 toolchain
+export PATH="$PATH:/home/sl/avr32/avr32-gnu-toolchain-linux_x86_64/bin"
 
 ## Useful for current research
 alias fzebulon='ssh fourquet@zebulon.iscpif.fr'
