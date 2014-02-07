@@ -1,18 +1,8 @@
 #!/bin/bash
 # Startup commands for i3
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
-export GPG_AGENT_INFO
-export GNOME_KEYRING_CONTROL
-export GNOME_KEYRING_PID
-
-udiskie &
 gnome-settings-daemon &
 gtk-redshift &
 nm-applet &
-bluetooth-applet &
-gnome-sound-applet &
-owncloud &
 clipit &
 workrave &
