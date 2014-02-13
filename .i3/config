@@ -187,5 +187,5 @@ exec --no-startup-id workrave
 exec --no-startup-id i3-msg 'workspace 1:notes; exec gnote --search'
 exec --no-startup-id i3-msg 'workspace 2:mail; exec thunderbird'
 exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
-exec --no-startup-id i3-msg 'workspace 4:chats; exec pidgin'
+exec --no-startup-id i3-msg 'workspace 4:chats; exec pidgin; exec xchat'
 exec --no-startup-id i3-msd 'workspace 1:notes'
