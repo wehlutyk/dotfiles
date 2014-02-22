@@ -37,8 +37,9 @@ plugins=(git git-extras git-flow git-hubflow pip mvn redis-cli virtualenvwrapper
 # Customize to your needs...
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 
-# Local bin
-export PATH="$HOME/.localroot/bin:$PATH"
+# Local installations
+export PATH="$HOME/.localroot/bin:$HOME/.local/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.localroot/lib:$HOME/.local/lib:$LD_LIBRARY_PATH"
 
 # Moved this below PATH so that .localroot/bin is included
 source $ZSH/oh-my-zsh.sh
