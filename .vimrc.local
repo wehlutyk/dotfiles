@@ -25,6 +25,9 @@ autocmd BufNewFile,BufRead *.rst :set shiftwidth=3
 " Jade files: workaround for https://github.com/digitaltoad/vim-jade/issues/25
 autocmd BufNewFile,BufRead *.jade :set filetype=jade
 
+" Webapp files
+autocmd BufNewfile,BufRead *.webapp :set filetype=json
+
 " LaTeX files
 let g:LatexBox_cite_pattern = '\c\\\a*cite\a*\*\?\_\s*{'
 let maplocalleader = ","
