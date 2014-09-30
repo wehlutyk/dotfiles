@@ -103,13 +103,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Local installations
-export PATH="$HOME/.localroot/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/.localroot/lib:$LD_LIBRARY_PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
 if [ x$PYTHONPATH == x"" ]
 then
-  export PYTHONPATH="$HOME/.localroot/lib/python2.7/site-packages"
+  export PYTHONPATH="$HOME/.local/lib/python2.7/site-packages"
 else
-  export PYTHONPATH="$HOME/.localroot/lib/python2.7/site-packages:$PYTHONPATH"
+  export PYTHONPATH="$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH"
 fi
 
 # Autojump
