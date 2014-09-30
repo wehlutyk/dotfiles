@@ -1,5 +1,5 @@
 [core]
-    editor = vim
+    editor = vim -f
 [user]
     name = Sébastien Lerique
     email = sl@mehho.net
@@ -12,3 +12,5 @@
     ui = auto
 [mergetool "nbmerge"]
     cmd = nbmerge $LOCAL $BASE $REMOTE $MERGED
+[init]
+    templatedir = ~/.git_template
