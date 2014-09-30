@@ -1,8 +1,0 @@
-#!/bin/bash
-# Startup commands for i3
-
-gnome-settings-daemon &
-gtk-redshift &
-nm-applet &
-clipit &
-workrave &
