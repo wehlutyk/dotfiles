@@ -27,8 +27,8 @@ set fish_plugins git python tmux localhost
 
 ## PATH
 # Local installations
-set PATH $PATH $HOME/.local/bin
-set LD_LIBRARY_PATH $LD_LIBRARY_PATH $HOME/.local/lib
+set PATH $HOME/.local/bin $PATH
+set LD_LIBRARY_PATH $HOME/.local/lib $LD_LIBRARY_PATH
 
 # Android SDK
 set ANDROID_HOME /home/sl/Code/Android/android-sdk-linux
