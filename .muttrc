@@ -1,6 +1,6 @@
-set realname='Sébastien Lerique'
-set spoolfile=imap://mail.mehho.net/INBOX
-set folder=imap://mail.mehho.net/
-mailboxes =INBOX '=a CMB Inbox'
-set header_cache='~/.cache/mutt/headers'
-set message_cachedir='~/.cache/mutt/messages'
+#set realname='Sébastien Lerique'
+#set spoolfile=imap://mail.mehho.net/INBOX
+#set folder=imap://mail.mehho.net/
+#mailboxes =INBOX '=a CMB Inbox'
+#set header_cache='~/.cache/mutt/headers'
+#set message_cachedir='~/.cache/mutt/messages'
