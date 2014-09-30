@@ -12,7 +12,8 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:Source Code Pro for Powerline 12px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -25,7 +26,7 @@ bindsym $mod+Return exec gnome-terminal --hide-menubar
 bindsym $mod+F4 kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec i3-dmenu-desktop
+bindsym $mod+b exec i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -61,9 +62,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym $mod+s layout stacking
-bindsym $mod+z layout tabbed
-bindsym $mod+e layout default
+bindsym $mod+t layout tabbed
+bindsym $mod+y layout stacking
+bindsym $mod+u layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -89,6 +90,16 @@ bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
+bindsym $mod+d workspace d
+bindsym $mod+s workspace s
+bindsym $mod+w workspace w
+bindsym $mod+m workspace m
+
+bindsym $mod+Shift+d move container to workspace d; workspace d
+bindsym $mod+Shift+s move container to workspace s; workspace s
+bindsym $mod+Shift+w move container to workspace w; workspace w
+bindsym $mod+Shift+m move container to workspace m; workspace m
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1; workspace number 1
 bindsym $mod+Shift+2 move container to workspace number 2; workspace number 2
@@ -101,12 +112,20 @@ bindsym $mod+Shift+8 move container to workspace number 8; workspace number 7
 bindsym $mod+Shift+9 move container to workspace number 9; workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10; workspace number 10
 
+# move workspace to monitor
+bindsym $mod+Shift+Ctrl+Right move workspace to output right
+bindsym $mod+Shift+Ctrl+L move workspace to output right
+bindsym $mod+Shift+Ctrl+Left move workspace to output left
+bindsym $mod+Shift+Ctrl+H move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
+bindsym $mod+Shift+E exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# Suspend
+bindsym $mod+Shift+Z exec "i3-nagbar -t warning -m 'You pressed the suspend shortcut. Do you really want to suspend the computer?' -b 'Yes, suspend' 'killall i3-nagbar && systemctl suspend'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -134,26 +153,43 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+mode "navigate" {
+        bindsym h exec nautilus -w --no-desktop ~/; mode "default"
+        bindsym l exec nautilus -w --no-desktop ~/Downloads/; mode "default"
+        bindsym o exec nautilus -w --no-desktop ~/Documents/; mode "default"
+        bindsym d exec nautilus -w --no-desktop ~/Desktop/; mode "default"
+        bindsym m exec nautilus -w --no-desktop ~/Music/; mode "default"
+        bindsym v exec nautilus -w --no-desktop ~/Videos/; mode "default"
+        bindsym i exec nautilus -w --no-desktop ~/Pictures/; mode "default"
+        bindsym c exec nautilus -w --no-desktop ~/Code/; mode "default"
+        bindsym r exec nautilus -w --no-desktop ~/Code/Research/; mode "default"
+        bindsym t exec nautilus -w --no-desktop ~/Documents/Études/2013-2016\ PhD/; mode "default"
+        bindsym p exec nautilus -w --no-desktop ~/Documents/Paperwork/; mode "default"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Start a file navigation  window
+bindsym $mod+n mode "navigate"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        font pango:Source Code Pro for Powerline 12px
         status_command i3status
 }
 
 # Change window border style
 new_window 1pixel
-bindsym $mod+t border normal
-bindsym $mod+y border 1pixel
-bindsym $mod+u border none
-
-# Start a browser window
-bindsym $mod+b exec luakit
-
-# Start a file navigation  window
-bindsym $mod+n exec nautilus --no-desktop
+#bindsym $mod+t border normal
+#bindsym $mod+y border 1pixel
+#bindsym $mod+u border none
 
 # Screen locking
-bindsym $mod+Shift+x exec i3lock -d -n -c 111111
+bindsym $mod+Shift+x exec /usr/local/bin/i3lock-us.sh
+
+# Screen saver: turn off screen after 5 minutes
+exec --no-startup-id xset dpms 0 0 300
 
 # Scratchpad bindings and initial setup
 bindsym $mod+Shift+equal move scratchpad
@@ -168,24 +204,40 @@ bindsym $mod+Shift+comma move container to workspace back_and_forth; workspace b
 # Rename a workspace
 bindsym $mod+Ctrl+r exec i3-input -F 'rename workspace to %s' -P 'New name: '
 
+# Keyboard layouts
+bindsym $mod+Ctrl+1 exec --no-startup-id setxkbmap -layout us; exec notify-send -t 500 -u low 'Layout en-US'
+bindsym $mod+Ctrl+2 exec --no-startup-id setxkbmap -layout fr; exec notify-send -t 500 -u low 'Layout fr'
+bindsym $mod+Ctrl+3 exec --no-startup-id setxkbmap -layout latam; exec notify-send -t 500 -u low 'Layout es-AR'
+bindsym $mod+Ctrl+4 exec --no-startup-id setxkbmap -layout de; exec notify-send -t 500 -u low 'Layout de'
+bindsym $mod+Ctrl+5 exec --no-startup-id setxkbmap -layout ara; exec notify-send -t 500 -u low 'Layout ar'
+
 # Unmount all udiskie mounts
-bindsym $mod+Shift+U exec udiskie-umount -a
+#bindsym $mod+Shift+U exec udiskie-umount -a
 
 # Sound keys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
 
+# Brightness levels. Setting +/-9 because the normal behaviour is
+# not inhibited, leading to an additional +/-1 when a brightness
+# key is pressed.
+bindsym XF86MonBrightnessUp exec sudo /usr/local/bin/set-brightness.sh +9
+bindsym XF86MonBrightnessDown exec sudo /usr/local/bin/set-brightness.sh -9
+
 # Start desktop services
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id gtk-redshift
+exec --no-startup-id /usr/bin/git-annex assistant --autostart
+exec --no-startup-id gtk-redshift -l manual
 exec --no-startup-id nm-applet
-exec --no-startup-id clipit
 exec --no-startup-id workrave
+exec --no-startup-id sleep 5 && volumeicon
+exec --no-startup-id feh --recursive --randomize --bg-fill ~/Pictures/Backgrounds/
+exec --no-startup-id keepass2
 
 # Start default programs
-exec --no-startup-id i3-msg 'workspace 1:notes; exec gnote --search'
-exec --no-startup-id i3-msg 'workspace 2:mail; exec thunderbird'
-exec --no-startup-id i3-msg 'workspace 3:web; exec firefox'
-exec --no-startup-id i3-msg 'workspace 4:chats; exec pidgin; exec xchat'
-exec --no-startup-id i3-msd 'workspace 1:notes'
+exec --no-startup-id i3-msg 'workspace d; exec gnote --search'
+exec --no-startup-id i3-msg 'workspace s; exec thunderbird; exec pidgin; exec /home/sl/Code/Web/pumpa/pumpa; layout tabbed'
+exec --no-startup-id i3-msg 'workspace w; exec firefox; exec liferea; layout tabbed'
+exec --no-startup-id i3-msg 'workspace m; exec clementine'
+exec --no-startup-id i3-msd 'workspace d; layout tabbed'
