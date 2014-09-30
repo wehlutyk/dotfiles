@@ -1,0 +1,2 @@
+# Allow sl to set brightness with script
+sl ALL=(root) NOPASSWD: /usr/local/bin/set-brightness.sh

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Gnomy i3
+Comment=improved dynamic tiling window manager
+Exec=/usr/local/bin/gnomy-i3
+TryExec=/usr/local/bin/gnomy-i3
+Type=Application
+X-LightDM-DesktopName=Gnomy i3
