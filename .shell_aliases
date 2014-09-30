@@ -5,22 +5,5 @@ export PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
 ## AVR32 toolchain
 export PATH="$PATH:/home/sl/avr32/avr32-gnu-toolchain-linux_x86_64/bin"
 
-## Useful for current research
-alias fzebulon='ssh fourquet@zebulon.iscpif.fr'
-alias webquotes='cd ~/Code/Research/WebQuotes/main && workon treetagger'
-alias naja='cd ~/Code/Web/naja && workon naja'
-alias yelandur='cd ~/Code/Web/yelandur && workon yelandur'
-
-## IPython aliases
-# General PyLab IPython
-alias ilab='ipython --pylab'
-alias ilab3='ipython3 --pylab'
-alias iqt-lab='ipython qtconsole --pylab=inline'
-alias iqt3-lab='ipython3 qtconsole --pylab=inline'
-alias iqt-connect='ipython qtconsole --existing --pylab=inline'
-alias iqt3-connect='ipython3 qtconsole --existing --pylab=inline'
-alias inote-lab='ipython notebook --pylab=inline'
-alias inote3-lab='ipython3 notebook --pylab=inline'
-
-## Git aliases
-alias gd='git diff --color-words'
+## Packer
+export PATH="$PATH:/opt/packer"
