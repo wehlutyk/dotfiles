@@ -1,12 +1,14 @@
 [core]
     editor = vim
 [user]
-	name = Sébastien Lerique
-	email = sl@mehho.net
+    name = Sébastien Lerique
+    email = sl@mehho.net
 [giggle]
-	main-window-maximized = false
-	main-window-geometry = 1054x725+377+24
+    main-window-maximized = false
+    main-window-geometry = 1054x725+377+24
 [push]
-	default = current
+    default = current
 [color]
-	ui = auto
+    ui = auto
+[mergetool "nbmerge"]
+    cmd = nbmerge $LOCAL $BASE $REMOTE $MERGED
