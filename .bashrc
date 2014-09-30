@@ -102,18 +102,25 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+## Autojump
+. /usr/share/autojump/autojump.sh
+
+## No virtualenv (for now)
+
+## Path
 # Local installations
 export PATH="$HOME/.local/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
-if [ x$PYTHONPATH == x"" ]
-then
-  export PYTHONPATH="$HOME/.local/lib/python2.7/site-packages"
-else
-  export PYTHONPATH="$HOME/.local/lib/python2.7/site-packages:$PYTHONPATH"
-fi
 
-# Autojump
-. /usr/share/autojump/autojump.sh
+# Android SDK
+export ANDROID_HOME="/home/sl/Code/Android/android-sdk-linux"
+export PATH="${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools"
+
+# AVR32 toolchain
+export PATH="$PATH:/home/sl/avr32/avr32-gnu-toolchain-linux_x86_64/bin"
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Packer
+export PATH="$PATH:/opt/packer"
