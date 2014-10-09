@@ -222,8 +222,8 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 # Brightness levels. Setting +/-9 because the normal behaviour is
 # not inhibited, leading to an additional +/-1 when a brightness
 # key is pressed.
-bindsym XF86MonBrightnessUp exec sudo /usr/local/bin/set-brightness.sh +9
-bindsym XF86MonBrightnessDown exec sudo /usr/local/bin/set-brightness.sh -9
+bindsym XF86MonBrightnessUp exec sudo /usr/local/bin/set-brightness.sh +50
+bindsym XF86MonBrightnessDown exec sudo /usr/local/bin/set-brightness.sh -50
 
 # Start desktop services
 exec --no-startup-id gnome-settings-daemon

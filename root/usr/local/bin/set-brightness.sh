@@ -1,26 +1,28 @@
 #!/bin/bash
 # Adjust brightness value
 
-BFILE=/sys/class/backlight/acpi_video0/brightness
+BFILE=/sys/class/backlight/intel_backlight/brightness
+MFILE=/sys/class/backlight/intel_backlight/max_brightness
 
 if [ $# != 1 ]
 then
     echo "Usage: $(basename $0) delta"
-    echo "e.g. $(basename $0) -10"
+    echo "e.g. $(basename $0) -50"
     exit 1
 fi
 
 CVALUE=$(cat $BFILE)
+MVALUE=$(cat $MFILE)
 NVALUE=$((CVALUE + $1))
 
-if [[ $NVALUE -le 0 ]]
+if [[ $NVALUE -lt 0 ]]
 then
     NVALUE=0
 fi
 
-if [[ $NVALUE -ge 100 ]]
+if [[ $NVALUE -gt $MVALUE ]]
 then
-    NVALUE=100
+    NVALUE=$MVALUE
 fi
 
 echo $NVALUE > $BFILE
