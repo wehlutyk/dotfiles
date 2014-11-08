@@ -209,7 +209,7 @@ bindsym $mod+Ctrl+1 exec --no-startup-id setxkbmap -layout us; exec notify-send 
 bindsym $mod+Ctrl+2 exec --no-startup-id setxkbmap -layout fr; exec notify-send -t 500 -u low 'Layout fr'
 bindsym $mod+Ctrl+3 exec --no-startup-id setxkbmap -layout latam; exec notify-send -t 500 -u low 'Layout es-AR'
 bindsym $mod+Ctrl+4 exec --no-startup-id setxkbmap -layout de; exec notify-send -t 500 -u low 'Layout de'
-bindsym $mod+Ctrl+5 exec --no-startup-id setxkbmap -layout ara; exec notify-send -t 500 -u low 'Layout ar'
+bindsym $mod+Ctrl+5 exec --no-startup-id setxkbmap -layout br; exec notify-send -t 500 -u low 'Layout br'
 
 # Unmount all udiskie mounts
 #bindsym $mod+Shift+U exec udiskie-umount -a
