@@ -32,7 +32,7 @@ set LD_LIBRARY_PATH $HOME/.local/lib $LD_LIBRARY_PATH
 
 # Android SDK
 set ANDROID_HOME /home/sl/Code/Android/android-sdk-linux
-set PATH $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $ANDROID_HOME/build-tools/20.0.0
+set PATH $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $ANDROID_HOME/build-tools/21.1.0
 
 # AVR32 toolchain
 set PATH $PATH /home/sl/avr32/avr32-gnu-toolchain-linux_x86_64/bin
