@@ -237,7 +237,7 @@ exec --no-startup-id keepass2
 
 # Start default programs
 exec --no-startup-id i3-msg 'workspace d; exec gnote --search'
-exec --no-startup-id i3-msg 'workspace s; exec thunderbird; exec pidgin; exec /home/sl/Code/Web/pumpa/pumpa; layout tabbed'
+exec --no-startup-id i3-msg 'workspace s; exec thunderbird; exec pidgin; exec /home/sl/Code/Web/pumpa/pumpa; exec corebird; layout tabbed'
 exec --no-startup-id i3-msg 'workspace w; exec firefox; exec liferea; layout tabbed'
 exec --no-startup-id i3-msg 'workspace m; exec clementine'
 exec --no-startup-id i3-msd 'workspace d; layout tabbed'
