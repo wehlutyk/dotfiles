@@ -50,3 +50,13 @@ let g:tagbar_sort=0
 
 " Have airline show buffers when only one tab is open
 let g:airline#extensions#tabline#enabled = 1
+
+" vCoolor settings
+let g:vcoolor_map = '<leader>cc'
+let g:vcool_ins_rgb_map = '<leader>cr'
+let g:vcool_ins_hsl_map = '<leader>ch'
+let g:vcool_ins_rgba_map = '<leader>ca'
+let g:vcoolor_lowercase = 1
+
+" zealvim settings
+let g:zv_lazy_docset_list = [ 'EmberJS', 'Bootstrap 3', 'jQuery', 'D3.js', 'Python 2', 'Python 3', 'NumPy', 'SciPy', 'Django', 'HTML', 'CSS' ]
