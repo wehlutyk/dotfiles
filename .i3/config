@@ -165,6 +165,7 @@ mode "navigate" {
         bindsym r exec nautilus -w --no-desktop ~/Code/Research/; mode "default"
         bindsym t exec nautilus -w --no-desktop ~/Documents/Études/2013-2016\ PhD/; mode "default"
         bindsym p exec nautilus -w --no-desktop ~/Documents/Paperwork/; mode "default"
+        bindsym u exec nautilus -w --no-desktop ~/Documents/Voyages/Current\ tickets; mode "default"
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
