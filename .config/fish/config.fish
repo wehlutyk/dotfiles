@@ -43,6 +43,9 @@ set PATH $PATH /usr/local/heroku/bin
 # Packer
 set PATH $PATH /opt/packer
 
+## Start keychain
+keychain --nogui id_rsa
+
 ## Start tmux
 #if which tmux > /dev/null
   #not echo $TERM | grep -q screen; and test -z $TMUX; and exec tmux
